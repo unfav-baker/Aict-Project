@@ -1,17 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="shortcut icon" href="Favicon(1)(1).png" type="image/x-icon">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>C++ Tutorials</title>
+    <title>C++ Tutorials - Arrays</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <script src="script.js"></script>
-
     <header>
-        <h1>C++ Tutorials</h1> 
+        <a href="index.html" class="logo-link">
+            <h1>C++ Tutorials</h1> 
+          </a>
         <nav class="navbar">
             <ul>
                 <li><a href="introduction.html">Introduction</a></li>
@@ -26,30 +25,110 @@
     </header>
 
     <main>
-           <section id="arrays">
-            <h2>4.Arrays</h2>
-            <p>
-                <br>In C++, an array is a data structure used to store a collection of elements of the same data type, arranged in contiguous memory locations. Arrays allow efficient storage and access of multiple values, especially when the number of elements is known in advance. Each element in an array can be accessed using an index, starting from 0 for the first element. For example, in the declaration int arr[5];, arr is an array that can hold five integer values.<br>
-                
-                <br>Arrays in C++ can be of any data type, including integers, floating-point numbers, characters, or even user-defined types like classes. <br>The size of an array must be defined at the time of its declaration, and it remains fixed throughout the program. <br>You can initialize an array with values at the time of declaration, such as int arr[3] = {1, 2, 3};.<br>
-                
-                <br>One of the main advantages of arrays is that they allow you to group related data together, making it easier to manage and manipulate. <br>Arrays can be one-dimensional, where all elements are in a single line, or multi-dimensional, where elements are stored in tables, grids, or matrices. <br>A two-dimensional array is defined like this: int matrix[3][4];, where 3 represents the number of rows and 4 represents the number of columns.<br>
-                
-               <br> Accessing array elements is done through indices. For example, to access the third element in the array arr, you would write arr[2]. This allows for fast access to any element by directly referencing its index, making arrays an efficient choice for situations requiring frequent access to data.<br>
-                
-               <br> Arrays are often used in conjunction with loops for operations like searching, sorting, and processing all elements.<br>In C++, arrays are often used for performance-critical applications, where the need for efficient memory usage and fast access to elements is paramount. <br>Arrays provide a simple, low-overhead solution to store and manage multiple items, and their straightforward syntax makes them easy to use for beginners.<br>
-                
-                <br>To sum up, arrays in C++ are a fundamental concept that allows for storing multiple elements of the same type.<br> They are highly efficient for indexing and iterating over data, but they require careful management of their size and bounds.<br> While arrays are a powerful tool, modern C++ programming often uses more flexible alternatives like std::vector when dynamic resizing is needed.<br> Proper understanding and use of arrays are essential for writing optimized and effective C++ code.<br></p>
-            <h3>Video Link:</h3>
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/ePJxpxsnkGw?si=ZKokY9cvOT3biBYA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <section class="content-section">
+            <h2>4. Arrays in C++</h2>
+            <p>Arrays are data structures that store collections of elements of the same data type in contiguous memory locations. They provide efficient access and storage for multiple values when the size is known in advance.</p>
             
-           </section>
+            <div class="code-example">
+                // Array declaration and initialization
+                int numbers[5] = {1, 2, 3, 4, 5};
+                char vowels[5] = {'a', 'e', 'i', 'o', 'u'};
+                
+                // Two-dimensional array
+                int matrix[3][4] = {
+                    {1, 2, 3, 4},
+                    {5, 6, 7, 8},
+                    {9, 10, 11, 12}
+                };
+            </div>
+
+            <p>Key features of arrays:</p>
+            <ul>
+                <li>Fixed size defined at declaration time</li>
+                <li>Zero-based indexing for element access</li>
+                <li>Support for multiple dimensions</li>
+                <li>Efficient memory usage and fast access</li>
+                <li>Commonly used with loops for data processing</li>
+            </ul>
+
+            <div class="video-container">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/ePJxpxsnkGw?si=c0zUoNWkxrdqt2t5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+        </section>
+
+        <section class="quiz-section">
+            <h2>Test Your Knowledge</h2>
+            <div class="quiz-question">
+                <h3>1. How do you access the third element of an array in C++?</h3>
+                <div class="quiz-options">
+                    <div class="quiz-option" data-correct="true">array[2]</div>
+                    <div class="quiz-option">array[3]</div>
+                    <div class="quiz-option">array(2)</div>
+                    <div class="quiz-option">array.3</div>
+                </div>
+            </div>
+
+            <div class="quiz-question">
+                <h3>2. Which statement about C++ arrays is true?</h3>
+                <div class="quiz-options">
+                    <div class="quiz-option" data-correct="true">Arrays have a fixed size that cannot be changed after declaration</div>
+                    <div class="quiz-option">Arrays can store elements of different data types</div>
+                    <div class="quiz-option">Array indices start from 1</div>
+                    <div class="quiz-option">Arrays automatically resize when full</div>
+                </div>
+            </div>
+
+            <button class="submit-quiz">Submit Answers</button>
+        </section>
     </main>
 
     <footer>
         <p>&copy; 2024 C++ Tutorials. All rights reserved.</p>
     </footer>
 
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const quizOptions = document.querySelectorAll('.quiz-option');
+            const submitButton = document.querySelector('.submit-quiz');
+            let quizSubmitted = false;
+
+            quizOptions.forEach(option => {
+                option.addEventListener('click', function() {
+                    if (!quizSubmitted) {
+                        // Remove selected class from siblings
+                        const siblings = option.parentElement.children;
+                        Array.from(siblings).forEach(sib => sib.classList.remove('selected'));
+                        // Add selected class to clicked option
+                        option.classList.add('selected');
+                    }
+                });
+            });
+
+            submitButton.addEventListener('click', function() {
+                if (!quizSubmitted) {
+                    quizSubmitted = true;
+                    let score = 0;
+                    quizOptions.forEach(option => {
+                        if (option.classList.contains('selected')) {
+                            if (option.dataset.correct === 'true') {
+                                option.classList.add('correct');
+                                score++;
+                            } else {
+                                option.classList.add('incorrect');
+                            }
+                        }
+                        // Show correct answer if wrong one was selected
+                        if (option.dataset.correct === 'true' && !option.classList.contains('selected')) {
+                            option.classList.add('correct');
+                        }
+                    });
+                    submitButton.textContent = `Quiz Completed - Score: ${score}/2`;
+                    submitButton.disabled = true;
+                }
+            });
+        });
+    </script>
+</body>
+</html>
 </body>
 </html>

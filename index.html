@@ -1,19 +1,183 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="shortcut icon" href="Favicon(1)(1).png" type="image/x-icon">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>C++ Tutorials</title>
-    <link rel="stylesheet" href="style.css">
+    <title>CodeMaster - C++ Programming Tutorials</title>
+    <style>
+        /* Reset default styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        /* Variables */
+        :root {
+            --primary-color: #2563eb;
+            --secondary-color: #1e40af;
+            --background-color: #f8fafc;
+            --text-color: #1e293b;
+            --card-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+        }
+
+        body {
+            background-color: var(--background-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        /* Header Styles */
+        header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 1rem 0;
+            box-shadow: var(--card-shadow);
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .header-content h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .header-content p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        /* Navigation */
+        nav {
+            background-color: white;
+            padding: 1rem 0;
+            box-shadow: var(--card-shadow);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            border-radius: 0.5rem;
+            transition: all 0.3s ease;
+        }
+
+        nav a:hover {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        /* Main Content */
+        main {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 2rem;
+        }
+
+        .tutorial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .tutorial-card {
+            background-color: white;
+            border-radius: 1rem;
+            padding: 1.5rem;
+            box-shadow: var(--card-shadow);
+            transition: transform 0.3s ease;
+        }
+
+        .tutorial-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .tutorial-card h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .tutorial-card p {
+            margin-bottom: 1rem;
+            color: #64748b;
+        }
+
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            border-radius: 0.5rem;
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--text-color);
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 4rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .header-content h1 {
+                font-size: 2rem;
+            }
+
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+                gap: 1rem;
+            }
+
+            .tutorial-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 <body>
-    <script src="script.js"></script>
-
     <header>
-        
-        <h1>C++ Tutorials</h1> 
-        <nav class="navbar">
+        <div class="header-content">
+            <h1>Master C++ Programming</h1>
+            <p>Learn C++ from basics to advanced with our comprehensive video tutorials and interactive quizzes</p>
+        </div>
+    </header>
+
+    <nav>
+        <div class="nav-container">
             <ul>
                 <li><a href="introduction.html">Introduction</a></li>
                 <li><a href="variables.html">Variables</a></li>
@@ -23,73 +187,72 @@
                 <li><a href="loops.html">Loops</a></li>
                 <li><a href="ifelse.html">If & If Else</a></li>
             </ul>
-        </nav>
-    </header>
+            </ul>
+        </div>
+    </nav>
 
     <main>
-            <section id="introduction">
-            <h2>1.Introduction</h2>
-            <p>"C++ is a high-level, general-purpose programming language that builds on the foundation of C with added features like object-oriented programming (OOP). It allows for both low-level memory manipulation and high-level abstractions, making it versatile for system/software development and performance-critical applications. Widely used in areas such as game development, operating systems, and real-time systems, C++ combines efficiency with powerful features. "</p>
-            <h3>Video Link:</h3> 
-            <!-- <video width = "320" height = "240" controls style = "margin-top: 10px;" sound = "true" autoplay = "true" lopp = "true" muted = "true" p>
-                <source src = "C++ Introduction.mp4" type = "video/mp4"> -->
+        <div class="tutorial-grid">
+            <div class="tutorial-card">
+                <h3>1. Introduction to C++</h3>
+                <p>Learn the fundamentals of C++ programming language and its powerful features for system and software development.</p>
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/j8nAHeVKL08" allowfullscreen></iframe>
+                </div>
+            </div>
 
-            <iframe width="560" height="315" 
-            src="https://www.youtube.com/embed/j8nAHeVKL08" 
-            title="YouTube video player" 
-            frameborder="0" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-            allowfullscreen>
-            </iframe> 
+            <div class="tutorial-card">
+                <h3>2. Variables in C++</h3>
+                <p>Master the concept of variables, data types, and memory management in C++ programming.</p>
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/JrnQ-915czY" allowfullscreen></iframe>
+                </div>
+            </div>
 
-            
-            <h2>2.Variables</h2>
-            <p>In C++, variables are used to store data values that can be manipulated during program execution. Each variable has a specific data type, such as int, float, or char, which defines the kind of data it can hold. Variables must be declared before use, specifying their type and optionally initializing them with a value.</p>
-            <h3>Video Link:</h3>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/JrnQ-915czY?si=HL8aOFruyRT_uivX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            <!-- <section id="comments"> -->
-            <h2>3.Comments</h2>
-            <p>In C++, comments are used to explain code and make it more readable, without affecting the program’s execution. Single-line comments begin with //, while multi-line comments are enclosed between /* and */. Comments help developers understand code logic and can be used for documenting or temporarily disabling parts of the code.</p>       
-            <h3>Video Link:</h3>
+            <div class="tutorial-card">
+                <h3>3. Comments</h3>
+                <p>Learn how to write effective comments to make your code more readable and maintainable.</p>
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/1-OKPH1y4EA" allowfullscreen></iframe>
+                </div>
+            </div>
 
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/1-OKPH1y4EA?si=ObJ5ti_n4GQZpAuL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            <!-- <section id="arrays"> -->
-            <h2>4.Arrays</h2>
-            <p>In C++, an array is a collection of elements of the same data type, stored in contiguous memory locations. Arrays are fixed in size, meaning the number of elements must be specified at the time of declaration. They allow efficient access to elements using an index, starting from zero.</p>
-            <h3>Video Link:</h3>
+            <div class="tutorial-card">
+                <h3>4. Arrays</h3>
+                <p>Understand arrays and how to work with collections of data in C++.</p>
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/ePJxpxsnkGw" allowfullscreen></iframe>
+                </div>
+            </div>
 
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/ePJxpxsnkGw?si=ZKokY9cvOT3biBYA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            
-            <h2>5.Functions</h2>
-            <p>In C++, a function is a block of code designed to perform a specific task, allowing code reuse and modularity. Functions are defined with a return type, a name, and optional parameters. They can return a value or perform actions without returning anything, depending on the return type.</p>
-            <h3>Video Link:</h3>
+            <div class="tutorial-card">
+                <h3>5. Functions</h3>
+                <p>Learn to create and use functions for better code organization and reusability.</p>
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/RFLFX1boGwo" allowfullscreen></iframe>
+                </div>
+            </div>
 
+            <div class="tutorial-card">
+                <h3>6. Loops</h3>
+                <p>Master different types of loops for efficient program flow control.</p>
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/a7dfSBrTZtE" allowfullscreen></iframe>
+                </div>
+            </div>
 
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/RFLFX1boGwo?si=KuAeCy_z0tLuVUJ1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            
-            <h2>6.Loops</h2>
-            <p>In C++, loops are used to repeatedly execute a block of code based on a condition. The main types of loops are for, while, and do-while. A for loop is typically used when the number of iterations is known, while while and do-while loops are used when the number of iterations is determined by a condition.</p>
-            <h3>Video Link:</h3>
-
-
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/a7dfSBrTZtE?si=ldSnyx22edR5eUxd" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            
-            <h2>7.If & If Else</h2>
-            <p>In C++, the if statement is used to execute a block of code if a specified condition is true. The if-else statement allows you to execute one block of code if the condition is true, and a different block if the condition is false. Both are used for decision-making in programs.</p>
-            <h3>Video Link:</h3>
-
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/AY96XFqb934?si=rXn_-8r8M4r5rSIs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            </iframe> 
-
-
-
-
-    
+            <div class="tutorial-card">
+                <h3>7. If & If Else</h3>
+                <p>Learn decision-making in programming using conditional statements.</p>
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/AY96XFqb934" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
     </main>
 
     <footer>
-        <p>&copy; 2024 C++ Tutorials. All rights reserved.</p>
+        <p>&copy; 2024 CodeMaster - C++ Tutorials. All rights reserved.</p>
     </footer>
-
 </body>
-</html>
+</html>`                        

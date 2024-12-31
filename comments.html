@@ -4,14 +4,14 @@
     <link rel="shortcut icon" href="Favicon(1)(1).png" type="image/x-icon">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>C++ Tutorials</title>
+    <title>C++ Tutorials - Comments</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <script src="script.js"></script>
-
     <header>
-        <h1>C++ Tutorials</h1> 
+        <a href="index.html" class="logo-link">
+            <h1>C++ Tutorials</h1> 
+          </a>
         <nav class="navbar">
             <ul>
                 <li><a href="introduction.html">Introduction</a></li>
@@ -26,34 +26,144 @@
     </header>
 
     <main>
-        <section id="comments">
-            
-            <h2>3.Comments</h2>
-            
-                <br>In C++, comments are used to make code more readable and to document what the code is doing. They help developers understand the logic, functionality, and purpose of a specific section of code. Comments are ignored by the compiler, so they do not affect the execution of the program. Proper use of comments enhances code maintainability and collaboration among developers.<br>
-                
-               <br> There are two types of comments in C++: single-line and multi-line. A single-line comment begins with // and continues until the end of the line. For example, // This is a single-line comment is a comment that explains something about the code on that line. These comments are ideal for brief explanations.<br>
-                
-                <br>Multi-line comments are enclosed between /* and / and can span several lines. For instance, / This is a multi-line comment. It can be as long as needed. */. Multi-line comments are useful when a detailed explanation is necessary, or when commenting out large blocks of code for debugging purposes.<br>
-                
-                <br>Comments can be used to describe the overall functionality of a program, the purpose of variables, or the specific steps of an algorithm. This is particularly important in complex programs, where the logic might not be immediately obvious. They also help future developers or collaborators who may work on the code to quickly understand its intent.<br>
-                
-                <br>In C++, comments can also be used for temporary debugging. Developers often comment out sections of code to isolate issues or test different parts of the program. By commenting out code instead of deleting it, they can easily restore it later if needed.<br>
-                
-                <br>It’s essential to avoid excessive or redundant comments. Good code should be self-explanatory, and comments should be used to clarify sections that might be confusing or complex. <br>-commenting can clutter the code and reduce readability. Conversely, under-commenting can lead to confusion, especially when the code is difficult to understand at first glance.In large projects, using a consistent style for comments is crucial. <br>Some developers follow specific comment formatting guidelines or use documentation tools to generate API documentation from comments.<br> In C++, this can be achieved using tools like Doxygen, which extracts documentation from specially formatted comments in the code.<br>
-                
-                <br>Overall, comments are an essential part of writing clear, maintainable, and understandable code in C++. Properly using comments enhances collaboration, debugging, and long-term code management.<br> It’s important to strike a balance between writing meaningful comments and allowing the code itself to be as self-explanatory as possible.<br></p>       
-            <h3>Video Link:</h3>
+        <section class="content-section">
+            <h2>3. Comments in C++</h2>
+            <p>Comments in C++ are used to make code more readable and to document program functionality. They are ignored by the compiler and don't affect program execution.</p>
 
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/1-OKPH1y4EA?si=ObJ5ti_n4GQZpAuL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <h3>Types of Comments</h3>
             
-            
-           </section>   
+            <div class="code-example">
+                <span class="comment-green">// This is a single-line comment</span>
+                int x = 5;
+
+                <span class="comment-green">/*
+                This is a multi-line comment
+                It can span several lines
+                Useful for longer explanations
+                */</span>
+                double pi = 3.14159;
+            </div>
+
+            <p>Comments serve several important purposes:</p>
+            <ul>
+                <li>Documentation of code functionality</li>
+                <li>Explanation of complex algorithms</li>
+                <li>Temporary code disabling for debugging</li>
+                <li>Making code more maintainable</li>
+            </ul>
+
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/1-OKPH1y4EA" 
+                        title="YouTube video player" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen>
+                </iframe>
+            </div>
+        </section>
+
+        <section class="quiz-section">
+            <h2>Test Your Knowledge</h2>
+            <div class="quiz-question">
+                <h3>1. Which symbol is used for single-line comments in C++?</h3>
+                <div class="quiz-options">
+                    <div class="quiz-option" data-correct="true">//</div>
+                    <div class="quiz-option">/* */</div>
+                    <div class="quiz-option">#</div>
+                    <div class="quiz-option">--</div>
+                </div>
+            </div>
+
+            <div class="quiz-question">
+                <h3>2. What happens to comments during program execution?</h3>
+                <div class="quiz-options">
+                    <div class="quiz-option" data-correct="true">They are ignored by the compiler</div>
+                    <div class="quiz-option">They are executed as code</div>
+                    <div class="quiz-option">They cause errors</div>
+                    <div class="quiz-option">They slow down the program</div>
+                </div>
+            </div>
+
+            <div class="quiz-question">
+                <h3>3. Which of these is a valid multi-line comment?</h3>
+                <div class="quiz-options">
+                    <div class="quiz-option" data-correct="true">/* This is a
+multi-line comment */</div>
+                    <div class="quiz-option">// This is a
+multi-line comment //</div>
+                    <div class="quiz-option"># This is a
+multi-line comment #</div>
+                    <div class="quiz-option">''' This is a
+multi-line comment '''</div>
+                </div>
+            </div>
+
+            <div class="quiz-question">
+                <h3>4. What is a common use of comments in C++?</h3>
+                <div class="quiz-options">
+                    <div class="quiz-option">To make the program run faster</div>
+                    <div class="quiz-option" data-correct="true">To document code functionality</div>
+                    <div class="quiz-option">To declare variables</div>
+                    <div class="quiz-option">To compile the program</div>
+                </div>
+            </div>
+
+            <div class="quiz-question">
+                <h3>5. Which tool can be used to generate documentation from C++ comments?</h3>
+                <div class="quiz-options">
+                    <div class="quiz-option" data-correct="true">Doxygen</div>
+                    <div class="quiz-option">GitHub</div>
+                    <div class="quiz-option">VSCode</div>
+                    <div class="quiz-option">DevC++</div>
+                </div>
+            </div>
+
+            <button class="submit-quiz">Submit Answers</button>
+        </section>
     </main>
 
     <footer>
         <p>&copy; 2024 C++ Tutorials. All rights reserved.</p>
     </footer>
 
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const quizOptions = document.querySelectorAll('.quiz-option');
+            const submitButton = document.querySelector('.submit-quiz');
+            let quizSubmitted = false;
+
+            quizOptions.forEach(option => {
+                option.addEventListener('click', function() {
+                    if (!quizSubmitted) {
+                        const siblings = option.parentElement.children;
+                        Array.from(siblings).forEach(sib => sib.classList.remove('selected'));
+                        option.classList.add('selected');
+                    }
+                });
+            });
+
+            submitButton.addEventListener('click', function() {
+                if (!quizSubmitted) {
+                    quizSubmitted = true;
+                    let score = 0;
+                    let total = 5; // Total number of questions
+                    quizOptions.forEach(option => {
+                        if (option.classList.contains('selected')) {
+                            if (option.dataset.correct === 'true') {
+                                option.classList.add('correct');
+                                score++;
+                            } else {
+                                option.classList.add('incorrect');
+                            }
+                        }
+                        if (option.dataset.correct === 'true' && !option.classList.contains('selected')) {
+                            option.classList.add('correct');
+                        }
+                    });
+                    submitButton.textContent = `Quiz Completed - Score: ${score}/${total}`;
+                    submitButton.disabled = true;
+                }
+            });
+        });
+    </script>
 </body>
 </html>
